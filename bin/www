@@ -27,6 +27,7 @@ MongoClient.connect(process.env.MONGO_HOST, (err, client) => {
     if (err) {
         return console.error(err);
     }
+
     app.locals.db = client.db(process.env.MONGO_DB);
     app.listen(process.env.MONGO_PORT, () => {
         // start express server
