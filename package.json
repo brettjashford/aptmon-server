@@ -1,0 +1,9 @@
+{
+  "name": "aptmon-server",
+  "version": "1.0.0",
+  "description": "apartment monitor express app",
+  "main": "index.js",
+  "author": "Brett Ashford <brettjashford@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
