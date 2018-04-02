@@ -8,7 +8,7 @@ router.post('/', async function (req, res) {
     }
 
     // TODO: better error handling, logging
-    temps.map(temp => new Promise((resolve, reject) => {
+    const tempsAdded = temps.map(temp => new Promise((resolve, reject) => {
         req.app.locals.db.collection('temperature').insertOne({
             ...temp,
             dateAdded: new Date()
@@ -20,7 +20,7 @@ router.post('/', async function (req, res) {
         });
     }));
 
-    await Promise.all(temps);
+    await Promise.all(tempsAdded);
 
     res.json({
         success: true,
